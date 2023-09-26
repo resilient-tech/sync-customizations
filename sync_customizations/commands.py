@@ -1,6 +1,8 @@
 import click
+
 import frappe
 from frappe.commands import get_site, pass_context
+
 
 @click.command("sc-export")
 @pass_context
@@ -15,5 +17,6 @@ def export_customizations(context):
 
     export_customizations()
     print("Customizations exported successfully!")
+
 
 commands = [export_customizations]

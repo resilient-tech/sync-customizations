@@ -3,7 +3,9 @@ from sync_customizations.constants import DOCTYPES_TO_SYNC
 app_name = "sync_customizations"
 app_title = "Sync Customizations"
 app_publisher = "Resilient Tech"
-app_description = "Automatically sync Custom Fields and Property Setters in Frappe sites"
+app_description = (
+    "Automatically sync Custom Fields and Property Setters in Frappe sites"
+)
 app_email = "admin@resilient.tech"
 app_license = "mit"
 
@@ -16,5 +18,5 @@ doc_events = {
     },
     "Customize Form": {
         "save_customization": "sync_customizations.api.on_save_customization",
-    }
+    },
 }

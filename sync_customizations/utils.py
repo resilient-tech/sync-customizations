@@ -5,6 +5,7 @@ from frappe.modules.export_file import strip_default_fields
 
 from sync_customizations.constants import EXPORT_DIR_NAME
 
+
 def write_document_file(doc):
     doc_export = doc.as_dict(no_nulls=True)
     for key in ("idx", "__unsaved"):
@@ -20,8 +21,10 @@ def write_document_file(doc):
 def get_filters(doctype):
     return {"is_system_generated": 0} if doctype == "Custom Field" else {}
 
+
 def get_doctype_field(doctype):
     return "dt" if doctype == "Custom Field" else "doc_type"
+
 
 def delete_document_file(doc):
     try:
@@ -35,8 +38,10 @@ def get_folder(doctype):
     frappe.create_folder(folder_path)
     return folder_path
 
+
 def get_file_path(doc):
     return os.path.join(get_folder(doc.doctype), get_file_name(doc.name))
+
 
 def get_file_name(docname):
     return f"{docname}.json"
