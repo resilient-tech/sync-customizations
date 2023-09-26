@@ -2,6 +2,7 @@ import os
 
 import frappe
 from frappe.modules.export_file import strip_default_fields
+from frappe.utils import get_bench_path
 
 from sync_customizations.constants import EXPORT_DIR_NAME
 
@@ -33,8 +34,14 @@ def delete_document_file(doc):
         pass
 
 
+def get_export_dir_path():
+    if frappe.conf.customizations_dir:
+        return os.path.join(get_bench_path(), frappe.conf.customizations_dir)
+
+    return frappe.get_site_path(EXPORT_DIR_NAME)
+
 def get_folder(doctype):
-    folder_path = frappe.get_site_path(EXPORT_DIR_NAME, frappe.scrub(doctype))
+    folder_path = os.path.join(get_export_dir_path(), frappe.scrub(doctype))
     frappe.create_folder(folder_path)
     return folder_path
 
