@@ -16,7 +16,7 @@ Create Custom Fields and Property Setters as usual through Customize Form / Form
 
 #### Importing Customizations
 
-Ensure that the target app and the `sync_customizations` app are both installed on site. Customizations should get synced automatically during DB migration.
+Ensure that this app is installed and the `sites/[site-name]/customizations` directory is present. Customizations should get synced automatically during DB migration.
 
 ### License
 
