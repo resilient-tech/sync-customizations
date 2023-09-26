@@ -26,7 +26,7 @@ Ensure that this app is installed and the customizations directory is present. C
 
 ### Sponsors
 
-Special thanks to @filtersource and @rtCamp for sponsoring the development of this app!
+Special thanks to [@filtersource](https://github.com/filtersource) and [@rtCamp](https://github.com/rtCamp) for sponsoring the development of this app!
 
 ### License
 
