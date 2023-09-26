@@ -24,6 +24,10 @@ bench --site abc.localhost set-config customizations_dir apps/abc/customizations
 
 Ensure that this app is installed and the customizations directory is present. Customizations should get synced automatically during DB migration.
 
+### Sponsors
+
+Special thanks to @filtersource and @rtCamp for sponsoring the development of this app!
+
 ### License
 
 MIT
